@@ -1,7 +1,9 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Sonr Docs",
-  "openapi": ["/static/swagger/openapi.yaml"],
+  "openapi": [
+    "/static/swagger/openapi.yaml"
+  ],
   "logo": {
     "dark": "/static/logo/dark.png",
     "light": "/static/logo/light.svg"
@@ -36,7 +38,7 @@
   ],
   "topbarCtaButton": {
     "type": "github",
-    "url": "https://github.com/di-dao/sonr"
+    "url": "https://github.com/onsonr/sonr"
   },
   "topAnchor": {
     "name": "Docs",
@@ -57,7 +59,11 @@
   "navigation": [
     {
       "group": "Introduction",
-      "pages": ["sonr", "comparisons", "faqs"]
+      "pages": [
+        "sonr",
+        "comparisons",
+        "faqs"
+      ]
     },
     {
       "group": "Essentials",
@@ -121,7 +127,10 @@
     },
     {
       "group": "Getting Started",
-      "pages": ["guides/install", "guides/cli-usage"]
+      "pages": [
+        "guides/install",
+        "guides/cli-usage"
+      ]
     },
     {
       "group": "Client SDKs",
@@ -160,7 +169,9 @@
     },
     {
       "group": "Reference",
-      "pages": ["reference/overview"]
+      "pages": [
+        "reference/overview"
+      ]
     },
     {
       "group": "Modules",
