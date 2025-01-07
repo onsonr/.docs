@@ -1,91 +1,185 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Sonr Docs",
+  "openapi": ["/static/swagger/openapi.yaml"],
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/static/logo/dark.png",
+    "light": "/static/logo/light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/static/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "background": {
+      "dark": "#04131B",
+      "light": "#FAFDFF"
+    },
+    "primary": "#17c2ff",
+    "light": "#17c2ff",
+    "dark": "#279cff",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#003753",
+      "to": "#007CAE"
     }
+  },
+  "modeToggle": {
+    "isHidden": true,
+    "default": "dark"
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Chains API",
+      "url": "https://docs.interchain.land"
+    },
+    {
+      "name": "Discord",
+      "url": "https://sonr.io/discord"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "type": "github",
+    "url": "https://github.com/di-dao/sonr"
+  },
+  "topAnchor": {
+    "name": "Docs",
+    "icon": "book-open",
+    "iconType": "duotone"
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Guides",
+      "url": "guides"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Reference",
+      "url": "reference"
     }
   ],
+  "anchors": [],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
+      "group": "Introduction",
+      "pages": ["sonr", "comparisons", "faqs"]
     },
     {
       "group": "Essentials",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        {
+          "group": "Identity",
+          "icon": "user",
+          "pages": [
+            "identity/introduction",
+            "identity/identifier-types",
+            "identity/decentralized-identity",
+            "identity/ipfs-vaults",
+            "identity/controllers"
+          ]
+        },
+        {
+          "group": "Wallets",
+          "icon": "wallet",
+          "pages": [
+            "wallets/introduction",
+            "wallets/key-types",
+            "wallets/interchain-accounts",
+            "wallets/on-chain-multisigs",
+            "wallets/multi-party-computation"
+          ]
+        },
+        {
+          "group": "Blockchain",
+          "icon": "cube",
+          "pages": [
+            "blockchain/introduction",
+            "blockchain/modules",
+            "blockchain/ibc-protocol",
+            "blockchain/snr-token",
+            "blockchain/contributing"
+          ]
+        },
+        {
+          "group": "Network",
+          "icon": "globe",
+          "pages": [
+            "network/introduction",
+            "network/architecture",
+            "network/matrix-protocol",
+            "network/htmx-dynamic-ui",
+            "network/highway-proxy"
+          ]
+        },
+        {
+          "group": "Foundation",
+          "icon": "building-columns",
+          "pages": [
+            "foundation/introduction",
+            "foundation/structure",
+            "foundation/roles-and-responsibilities",
+            "foundation/compliance",
+            "foundation/token-distribution"
+          ]
+        }
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Getting Started",
+      "pages": ["guides/install", "guides/cli-usage"]
+    },
+    {
+      "group": "Client SDKs",
       "pages": [
-        "api-reference/introduction"
+        "guides/rest-api",
+        "guides/javascript",
+        "guides/swift",
+        "guides/golang"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Node Operators",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "Validator Guide",
+          "icon": "book",
+          "pages": [
+            "guides/validators",
+            "guides/joining-network",
+            "guides/mainnet-validator-info"
+          ]
+        },
+        {
+          "group": "Deployment Tools",
+          "icon": "wrench",
+          "pages": [
+            "guides/tools/client-integrations",
+            "guides/tools/block-explorers",
+            "guides/tools/faucets",
+            "guides/tools/graph-indexers",
+            "guides/tools/other-tools"
+          ]
+        },
+        "guides/validator-support"
+      ]
+    },
+    {
+      "group": "Reference",
+      "pages": ["reference/overview"]
+    },
+    {
+      "group": "Modules",
+      "pages": [
+        "sonr/dao",
+        "sonr/did",
+        "sonr/epochs",
+        "sonr/oracle",
+        "sonr/pools",
+        "sonr/revenue",
+        "sonr/vesting"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://x.com/sonr_io",
+    "github": "https://github.com/di-dao",
+    "linkedin": "https://www.linkedin.com/company/80770600",
+    "discord": "https://sonr.io/discord",
+    "medium": "https://blog.sonr.io"
   }
 }

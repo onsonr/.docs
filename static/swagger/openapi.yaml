@@ -1,0 +1,212 @@
+openapi: 3.1.0
+info:
+  title: ""
+  version: ""
+paths:
+  /did/account/{did}:
+    get:
+      operationId: account
+      parameters:
+        - name: did
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: did.v1.Query.Account response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryAccountResponse'
+  /did/exists/{id}:
+    get:
+      operationId: exists
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: did.v1.Query.Exists response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryExistsResponse'
+  /did/login/{origin}/options:
+    get:
+      operationId: loginOptions
+      parameters:
+        - name: origin
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: did.v1.Query.LoginOptions response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryLoginOptionsResponse'
+  /did/params:
+    get:
+      operationId: params
+      responses:
+        "200":
+          description: did.v1.Query.Params response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryParamsResponse'
+  /did/register/{origin}/options:
+    get:
+      operationId: registerOptions
+      parameters:
+        - name: origin
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: did.v1.Query.RegisterOptions response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryRegisterOptionsResponse'
+  /did/resolve/{id}:
+    get:
+      operationId: resolve
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: did.v1.Query.Resolve response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResolveResponse'
+components:
+  schemas:
+    Coin:
+      type: object
+      properties:
+        index:
+          type: integer
+          format: int64
+        path:
+          type: integer
+          format: uint32
+        symbol:
+          type: string
+        name:
+          type: string
+        hrp:
+          type: string
+    MsgAuthenticate:
+      type: object
+      properties:
+        authority:
+          type: string
+        controller:
+          type: string
+        address:
+          type: string
+    MsgAuthenticateResponse:
+      type: object
+    MsgInitializeController:
+      type: object
+      properties:
+        authority:
+          type: string
+        assertions:
+          type: array
+          items:
+            type: string
+            format: base64
+        keyshares:
+          type: array
+          items:
+            type: string
+            format: base64
+        verifications:
+          type: array
+          items:
+            type: string
+            format: base64
+    MsgInitializeControllerResponse:
+      type: object
+      properties:
+        controller:
+          type: string
+    MsgUpdateParams:
+      type: object
+      properties:
+        authority:
+          type: string
+        params:
+          $ref: '#/components/schemas/Params'
+    MsgUpdateParamsResponse:
+      type: object
+    Params:
+      type: object
+      properties:
+        acceptedCoins:
+          type: array
+          items:
+            $ref: '#/components/schemas/Coin'
+        propertyAllowlist:
+          type: array
+          items:
+            type: string
+        whitelistedOrigins:
+          type: array
+          items:
+            type: string
+        assertionRewardRate:
+          type: number
+          format: double
+        encryptionRewardRate:
+          type: number
+          format: double
+    QueryAccountResponse:
+      type: object
+      properties:
+        address:
+          type: string
+        accountInfo:
+          type: string
+        network:
+          type: string
+    QueryExistsResponse:
+      type: object
+      properties:
+        exists:
+          type: boolean
+    QueryLoginOptionsResponse:
+      type: object
+      properties:
+        options:
+          type: string
+    QueryParamsResponse:
+      type: object
+      properties:
+        params:
+          $ref: '#/components/schemas/Params'
+    QueryRegisterOptionsResponse:
+      type: object
+      properties:
+        options:
+          type: string
+    QueryResolveResponse:
+      type: object
+      properties:
+        document:
+          type: string

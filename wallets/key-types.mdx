@@ -1,0 +1,11 @@
+---
+title: "Key Types"
+icon: "2"
+---
+
+- Session Key: (`kuid`) Gets Credential Options and is established on client query.
+- Passkey: (`alg -7`) Returns JWT after succesful authentication linked to a Controller `actor.PID`
+- Authorization Key: `jwt` Passed by clients with HTTP Header for subsequent API Operations
+- Recovery Key: `hkdf`
+- KeyShare: `mpc-dkls`
+- Child Key: `bip44`
