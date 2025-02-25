@@ -4,6 +4,7 @@
   "icon": "Rocket",
   "root": true,
   "pages": [
+    "index",
     "accounts",
     "auth",
     "blocks",
@@ -13,7 +14,6 @@
     "health",
     "matrix",
     "nfts",
-    "overview",
     "prices",
     "spaces",
     "txns"
