@@ -7,6 +7,7 @@ const withAnalyzer = createBundleAnalyzer({
 });
 
 const config: NextConfig = {
+  output: 'export',
   reactStrictMode: true,
   logging: {
     fetches: {

@@ -1,6 +1,5 @@
 import { docs, blog as blogPosts } from '@/.source';
 import { loader } from 'fumadocs-core/source';
-import { createOpenAPI } from "fumadocs-openapi/server";
 import { createMDXSource } from 'fumadocs-mdx';
 
 export const source = loader({
@@ -13,4 +12,3 @@ export const blog = loader({
   source: createMDXSource(blogPosts),
 });
 
-export const openapi = createOpenAPI();
