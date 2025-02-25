@@ -3,17 +3,16 @@ title: "Introduction"
 icon: "1"
 ---
 
-<Frame>
-<img
-  src="/static/images/feature-loginbox-dark.png"
-  alt="Sonr Identity Hero"
-/>
-</Frame>
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 
-<Tabs>
-  <Tab title="Features">
+<img src="/static/images/feature-loginbox-dark.png" alt="Sonr Identity Hero" />
+
+<Tabs items={['Features', 'Key Terms', 'Sequence Diagrams']}>
+  <Tab value="Features">
     
-<CardGroup cols={2}>
+<Cards>
         <Card
     title="Interchain Accounts"
     iconType="duotone"
@@ -38,16 +37,15 @@ icon: "1"
   >
     Users can authenticate with a simple passkey, removing the need for complex passwords and seed-phrases.
   </Card>
-</CardGroup>
+</Cards>
 
   </Tab>
 
-
-  <Tab title="Key Terms">
+  <Tab value="Key Terms">
 
 #### P
 
-<AccordionGroup>
+<Accordions>
 <Accordion title="Public Key Assertion (WebAuthn)">
 **PublicKeyAssertion** in WebAuthn is cryptographic proof of private key possession to verify identity without passwords.
 </Accordion>
@@ -55,62 +53,56 @@ icon: "1"
 <Accordion title="Public Key Attestation (WebAuthn)">
 PublicKeyAttestation in WebAuthn verifies a credential's authenticity via an attestation statement from the authenticator.
 </Accordion>
-</AccordionGroup>
+</Accordions>
 
 #### R
-<AccordionGroup>
-<Accordion title="Relaying Party">
-An entity that relies upon a verifiable credential or authenticated identity during a transaction.
-</Accordion>
-</AccordionGroup>
+
+<Accordions>
+  <Accordion title="Relaying Party">
+    An entity that relies upon a verifiable credential or authenticated identity
+    during a transaction.
+  </Accordion>
+</Accordions>
 
 #### W
-<AccordionGroup>
-      <Accordion title="WebAuthn">
-A web standard for authenticating users using public-key cryptography instead of passwords.
-</Accordion>
-</AccordionGroup>
+
+<Accordions>
+  <Accordion title="WebAuthn">
+    A web standard for authenticating users using public-key cryptography
+    instead of passwords.
+  </Accordion>
+</Accordions>
 
     </Tab>
 
-  <Tab title="Sequence Diagrams">
+  <Tab value="Sequence Diagrams">
 
 <Steps titleSize="h3">
 <Step title="Remote Service Authentication">
-<Frame type="glass" caption="Stake the platform token for additional governance capabilities on the Network">
 <img
   src="/static/diagrams/service-auth.png"
   alt="Service Authentication User Journey"
 />
-</Frame>
 </Step>
       
 <Step title="Multi-Party Computation">
-<Frame type="glass" caption="Dual Root Key Controller Encryption">
 <img
   src="/static/diagrams/dual-dkls.png"
   alt="Dual Root Key Controller Encryption"
 />
-</Frame>
 </Step>
 
 <Step title="Authentication Fees Token Flow">
-        <Frame type="glass" caption="Authentication Revenue Stream for the DAO">
-<img
-  src="/static/diagrams/dao-revenue.png"
-  alt="Authentication Revenue Stream for the DAO"
-/>
-</Frame>
-        </Step>
-
-
+  <img
+    src="/static/diagrams/dao-revenue.png"
+    alt="Authentication Revenue Stream for the DAO"
+  />
+</Step>
 
 </Steps>
 
 </Tab>
  </Tabs>
-
-
 
 ## Eliminating Seed Phrases with Multi-Party Computation
 

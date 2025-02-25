@@ -4,15 +4,13 @@ description: "Sonr's IPFS Encrypted Vaults offer secure, globally accessible sto
 icon: "4"
 ---
 
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
 Sonr is introducing a new feature called IPFS Encrypted Vaults to enhance the security and accessibility of user wallet key data. This innovative solution combines the power of the InterPlanetary File System (IPFS) with advanced encryption techniques to provide users with a secure and globally accessible storage option for their sensitive information.
 
-<Frame>
-<img
-  src="/static/diagrams/ipfs-key-management.png"
-  alt="Sonr Identity Hero"
-/>
-</Frame>
-
+<img src="/static/diagrams/ipfs-key-management.png" alt="Sonr Identity Hero" />
 
 ## The Need for Secure and Accessible Key Storage
 
@@ -20,27 +18,35 @@ In the world of decentralized applications and cryptocurrencies, the security of
 
 Sonr recognizes the need for a solution that offers both strong security and global accessibility for wallet key data. By leveraging IPFS and encryption, Sonr aims to provide users with peace of mind while ensuring they can access their keys from anywhere in the world.
 
-<AccordionGroup>
+<Accordions>
   <Accordion title="How IPFS Encrypted Vaults Work">
     IPFS Encrypted Vaults utilize the decentralized nature of IPFS to store user wallet key data securely. Here's how it works:
   </Accordion>
 
-  <Accordion title="Encryption">
-    Before uploading the wallet key data to IPFS, Sonr employs advanced encryption techniques to protect the sensitive information. The data is encrypted using a strong encryption algorithm and a unique encryption key derived from the user's master key or password.
-  </Accordion>
+<Accordion title="Encryption">
+  Before uploading the wallet key data to IPFS, Sonr employs advanced encryption
+  techniques to protect the sensitive information. The data is encrypted using a
+  strong encryption algorithm and a unique encryption key derived from the
+  user's master key or password.
+</Accordion>
 
-  <Accordion title="IPFS Storage">
-    The encrypted wallet key data is then uploaded to IPFS, which is a distributed file system. IPFS ensures that the data is stored across multiple nodes in the network, providing redundancy and resilience against single points of failure.
-  </Accordion>
+<Accordion title="IPFS Storage">
+  The encrypted wallet key data is then uploaded to IPFS, which is a distributed
+  file system. IPFS ensures that the data is stored across multiple nodes in the
+  network, providing redundancy and resilience against single points of failure.
+</Accordion>
 
-  <Accordion title="Content Addressing">
-    IPFS uses content addressing, which means that each piece of data is uniquely identified by its cryptographic hash. This enables Sonr to retrieve the encrypted wallet key data from any IPFS node that holds a copy of it, ensuring global accessibility.
-  </Accordion>
+<Accordion title="Content Addressing">
+  IPFS uses content addressing, which means that each piece of data is uniquely
+  identified by its cryptographic hash. This enables Sonr to retrieve the
+  encrypted wallet key data from any IPFS node that holds a copy of it, ensuring
+  global accessibility.
+</Accordion>
 
   <Accordion title="Decryption">
     When a user needs to access their wallet keys, they can retrieve the encrypted data from IPFS using the content address. The data is then decrypted locally on the user's device using their master key or password. This ensures that only the authorized user can access their wallet keys.
   </Accordion>
-</AccordionGroup>
+</Accordions>
 
 ## Benefits of IPFS Encrypted Vaults
 

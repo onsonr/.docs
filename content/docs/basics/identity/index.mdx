@@ -4,17 +4,16 @@ icon: "1"
 description: "Sonr treats identity as the base primitive for all operations within the network. We utilize decentralized identifiers and MPC Cryptography in order to provide a universal proxy for Wallet Operations."
 ---
 
-<Frame>
-<img
-  src="/static/images/hero-identity.png"
-  alt="Sonr Identity Hero"
-/>
-</Frame>
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 
-<Tabs>
-  <Tab title="Features">
+<img src="/static/images/hero-identity.png" alt="Sonr Identity Hero" />
+
+<Tabs items={['Features', 'Key Terms']}>
+  <Tab value="Features">
     
-<CardGroup cols={2}>
+<Cards>
         <Card
     title="IPFS Key Vaults"
     iconType="duotone"
@@ -39,85 +38,72 @@ description: "Sonr treats identity as the base primitive for all operations with
   >
     Users can authenticate with a simple passkey, removing the need for complex passwords and seed-phrases.
   </Card>
-</CardGroup>
+</Cards>
 
   </Tab>
- 
 
- 
-<Tab title="Sequence Diagrams">
+<Tab value="Sequence Diagrams">
 
  <Steps titleSize="h3">
   <Step title="Elevated Permissions">
-  <Frame type="glass" caption="Stake the platform token for additional governance capabilities on the Network">
 <img
   src="/static/diagrams/staking-utility.png"
   alt="Stake the platform token for additional governance capabilities on the Network"
 />
-</Frame>
 
   </Step>
   <Step title="Client Identifier Resolution">
-  <Frame type="glass" caption="DID Client-Side Resolution" defaultOpen="true">
 <img
   src="/static/diagrams/did-resolution.png"
   alt="DID Client-Side Resolution"
 />
-</Frame>
 
   </Step>
   <Step title="IPFS Key Vaults">
-  <Frame type="glass" caption="User data is Anonymously Linked to the Off-Chain IPFS Vault Account System">
 <img
   src="/static/diagrams/account-system.png"
   alt="User data is Anonymously Linked to the Off-Chain IPFS Vault Account System"
 />
-</Frame>
   </Step>
 </Steps>
 
 </Tab>
 </Tabs>
 
-
 ## Introducing Decentralized Identifiers (DIDs)
 
 Decentralized Identifiers (DIDs) are a fundamental component of decentralized identity systems. A DID is a unique, globally resolvable identifier that is generated and managed by the identity owner. Unlike traditional identifiers, such as usernames or email addresses, DIDs are not issued by a central authority but are instead created and controlled by the user themselves.
 
-
-<Accordion title= "The Story of Digital IDs" icon="clock">
 In his original 1989 proposal for what would become the World Wide Web, Tim Berners-Lee outlined a vision of a “universal linked information system” where users would have control over their own data.
 He foresaw a decentralized architecture where information would be stored in “nodes” that users could link together through “links” in whatever way made sense to them.
 
 <Steps>
-<Step title="Web1 Identifiers (1990s)">
-In the early days of the internet known as Web1:
-Digital identity was limited and decentralized
-People used anonymous usernames or email addresses to identify themselves
-There were no widespread standards or protocols for proving one's identity online
-</Step>
-<Step title="Web2 Identifiers (2000s)">
-As the internet became more advanced in the Web2 era:
-Centralized identity providers emerged like Google, Facebook, Twitter
-Single sign-on allowed using one identity across multiple websites
-This made identity more convenient but gave control to a few big tech companies
-Privacy concerns emerged around tracking and data collection by identity providers
-</Step>
-<Step title="Web3 Identifiers (2010s-Present)">
-Web3 is ushering in a new phase of digital identity:
-Blockchain technology enables decentralized, user-controlled identity
-Decentralized identifiers (DIDs) give users more control of their data
-Verifiable credentials allow proving claims without oversharing personal info
-Self-sovereign identity (SSI) puts users in charge of their identities
-But standards are still emerging and adoption is in early stages
-</Step>
-<Step title="The Path Forward (2024-Beyond)">
-Digital identity has evolved from limited and decentralized, to convenient but centralized, to user-empowered but complex
-</Step>
+  <Step title="Web1 Identifiers (1990s)">
+    In the early days of the internet known as Web1: Digital identity was
+    limited and decentralized People used anonymous usernames or email addresses
+    to identify themselves There were no widespread standards or protocols for
+    proving one's identity online
+  </Step>
+  <Step title="Web2 Identifiers (2000s)">
+    As the internet became more advanced in the Web2 era: Centralized identity
+    providers emerged like Google, Facebook, Twitter Single sign-on allowed
+    using one identity across multiple websites This made identity more
+    convenient but gave control to a few big tech companies Privacy concerns
+    emerged around tracking and data collection by identity providers
+  </Step>
+  <Step title="Web3 Identifiers (2010s-Present)">
+    Web3 is ushering in a new phase of digital identity: Blockchain technology
+    enables decentralized, user-controlled identity Decentralized identifiers
+    (DIDs) give users more control of their data Verifiable credentials allow
+    proving claims without oversharing personal info Self-sovereign identity
+    (SSI) puts users in charge of their identities But standards are still
+    emerging and adoption is in early stages
+  </Step>
+  <Step title="The Path Forward (2024-Beyond)">
+    Digital identity has evolved from limited and decentralized, to convenient
+    but centralized, to user-empowered but complex
+  </Step>
 </Steps>
-</Accordion>
-
-
 
 ## The Technical Aspects of DIDs
 
@@ -127,22 +113,19 @@ A DID consists of three main components:
 - **Method**: The specific DID method used, such as “example”.
 - **Method-Specific Identifier**: A unique identifier within the context of the DID method.
 
-
 Example DID: `did:example:123456789abcdefghi`
 
 ## Decentralized Identity Methods
 
 DID methods define the specific implementation details for creating, resolving, and managing DIDs on different distributed ledger technologies or decentralized systems. Each DID method has its own specification, which outlines the technical requirements and procedures for working with DIDs within that particular ecosystem.
 
-| DID Method | Description                    |
-|------------|--------------------------------|
-| did:ethr   | Ethereum-based DIDs            |
-| did:sov    | Sovrin-based DIDs              |
+| DID Method | Description                         |
+| ---------- | ----------------------------------- |
+| did:ethr   | Ethereum-based DIDs                 |
+| did:sov    | Sovrin-based DIDs                   |
 | did:ion    | Identity Overlay Network (ION) DIDs |
-| did:web    | Web-based DIDs                 |
-
+| did:web    | Web-based DIDs                      |
 
 ## Decentralized Identity Resolution
 
 DID resolution is the process of retrieving the DID Document associated with a given DID. The resolution process involves querying the appropriate distributed ledger or decentralized storage system based on the DID method specified in the DID.
-
