@@ -4,6 +4,7 @@
 # generated content
 .contentlayer
 .fleek
+/out
 .content-collections
 .source
 
@@ -26,5 +27,6 @@ yarn-error.log*
 # others
 .env*.local
 .vercel
+.next
 next-env.d.ts
 .aider*
