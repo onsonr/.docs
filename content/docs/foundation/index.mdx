@@ -1,0 +1,86 @@
+---
+title: "Introduction"
+icon: "1"
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
+<img src="/static/images/feature-gov.png" alt="Sonr Identity Hero" />
+
+<Tabs items={['Features', 'Key Terms']}>
+
+<Tab value="Features">
+  <Cards>
+    <Card title="Interchain Accounts" iconType="duotone">
+      Wallets are stored in IPFS with Encrypted Access available to the User and
+      Sonr Validator nodes.
+    </Card>
+    <Card title="Passkey Authentication" iconType="duotone">
+      Users can authenticate with a simple passkey, removing the need for
+      complex passwords and seed-phrases.
+    </Card>
+    <Card title="Bridgeless Transactions" iconType="duotone">
+      Wallets are stored in IPFS with Encrypted Access available to the User and
+      Sonr Validator nodes.
+    </Card>
+    <Card title="Anonymously Linked Social Identifiers" iconType="duotone">
+      Users can authenticate with a simple passkey, removing the need for
+      complex passwords and seed-phrases.
+    </Card>
+  </Cards>
+</Tab>
+
+  <Tab title="Key Terms">
+#### P
+
+<Accordions>
+<Accordion title="Public Key Assertion (WebAuthn)">
+**PublicKeyAssertion** in WebAuthn is cryptographic proof of private key possession to verify identity without passwords.
+</Accordion>
+
+<Accordion title="Public Key Attestation (WebAuthn)">
+PublicKeyAttestation in WebAuthn verifies a credential's authenticity via an attestation statement from the authenticator.
+</Accordion>
+</Accordions>
+
+#### R
+
+<Accordions>
+  <Accordion title="Relaying Party">
+    An entity that relies upon a verifiable credential or authenticated identity
+    during a transaction.
+  </Accordion>
+</Accordions>
+
+#### W
+
+<Accordions>
+  <Accordion title="WebAuthn">
+    A web standard for authenticating users using public-key cryptography
+    instead of passwords.
+  </Accordion>
+</Accordions>
+
+    </Tab>
+
+  <Tab value="Sequence Diagrams">
+
+<Steps titleSize="h3">
+  <Step title="Authentication Revenue Stream">
+    <img
+      src="/static/diagrams/value-flow.png"
+      alt="Value Flow of Platform Token"
+    />
+  </Step>
+</Steps>
+
+  </Tab>
+</Tabs>
+
+## Wyoming Based
+
+## Non-Profit Mission
+
+## Our Solutions

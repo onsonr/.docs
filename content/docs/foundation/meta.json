@@ -1,0 +1,20 @@
+{
+  "title": "Foundation",
+  "description": "Information about the DAO",
+  "icon": "Library",
+  "root": true,
+  "pages": [
+    "---Guide---",
+    "index",
+    "compliance",
+    "contributing",
+    "roles-and-responsibilities",
+    "---Technology---",
+    "ibc-protocol",
+    "modules",
+    "structure",
+    "---Economy---",
+    "snr-token",
+    "token-distribution"
+  ]
+}

@@ -1,0 +1,103 @@
+---
+title: "Introduction"
+icon: "1"
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
+<img src="/static/images/hero-blockchain.png" alt="Sonr Identity Hero" />;
+
+<Tabs items={['Features', 'Key Terms']}>
+  <Tab value="Features">
+    
+<Cards>
+        <Card
+    title="L1 Blockchain Designed for Identity"
+    iconType="duotone"
+  >
+    Wallets are stored in IPFS with Encrypted Access available to the User and Sonr Validator nodes.
+  </Card>
+  <Card
+    title="W3C Standards Compliance"
+    iconType="duotone"
+  >
+    Users can authenticate with a simple passkey, removing the need for complex passwords and seed-phrases.
+  </Card>
+  <Card
+    title="Direct Chain-to-Chain Transactions"
+    iconType="duotone"
+  >
+    Wallets are stored in IPFS with Encrypted Access available to the User and Sonr Validator nodes.
+  </Card>
+  <Card
+    title="Delegated Proof-of-Stake"
+    iconType="duotone"
+  >
+    Users can authenticate with a simple passkey, removing the need for complex passwords and seed-phrases.
+  </Card>
+</Cards>
+  </Tab>
+
+  <Tab value="Key Terms">
+#### P
+
+<Accordions>
+<Accordion title="Public Key Assertion (WebAuthn)">
+**PublicKeyAssertion** in WebAuthn is cryptographic proof of private key possession to verify identity without passwords.
+</Accordion>
+
+<Accordion title="Public Key Attestation (WebAuthn)">
+PublicKeyAttestation in WebAuthn verifies a credential's authenticity via an attestation statement from the authenticator.
+</Accordion>
+</Accordions>
+
+#### R
+
+<Accordions>
+  <Accordion title="Relaying Party">
+    An entity that relies upon a verifiable credential or authenticated identity
+    during a transaction.
+  </Accordion>
+</Accordions>
+
+#### W
+
+<Accordions>
+  <Accordion title="WebAuthn">
+    A web standard for authenticating users using public-key cryptography
+    instead of passwords.
+  </Accordion>
+</Accordions>
+
+    </Tab>
+
+  <Tab title="Sequence Diagrams">
+
+<Steps titleSize="h3">
+<Step title="Remote Service Authentication">
+
+<img
+  src="/static/diagrams/service-auth.png"
+  alt="Service Authentication User Journey"
+/>
+</Step>
+      
+<Step title="Multi-Party Computation">
+<img
+  src="/static/diagrams/dual-dkls.png"
+  alt="Dual Root Key Controller Encryption"
+/>
+</Step>
+
+<Step title="Authentication Fees Token Flow">
+<img
+  src="/static/diagrams/dao-revenue.png"
+  alt="Authentication Revenue Stream for the DAO"
+/>
+        </Step>
+</Steps>
+
+</Tab>
+ </Tabs>

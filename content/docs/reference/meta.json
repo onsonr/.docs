@@ -1,0 +1,21 @@
+{
+  "title": "API Reference",
+  "description": "All the APIs",
+  "icon": "Rocket",
+  "root": true,
+  "pages": [
+    "accounts",
+    "auth",
+    "blocks",
+    "chains",
+    "coins",
+    "events",
+    "health",
+    "matrix",
+    "nfts",
+    "overview",
+    "prices",
+    "spaces",
+    "txns"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Basics",
+  "description": "Overview of the basics of Sonr",
+  "icon": "Library",
+  "root": true,
+  "pages": [
+    "---Guide---",
+    "index",
+    "dao",
+    "did",
+    "epochs",
+    "oracle",
+    "pools",
+    "revenue",
+    "vesting"
+  ]
+}
